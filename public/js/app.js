@@ -38,7 +38,8 @@ weatherForm.addEventListener('submit', (e) => {
     message1.textContent = "Loading..."
     message2.textContent = ""
     const location = search.value
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+    // fetch(`http://localhost:3000/weather?address=${location}`).then((response) => { // localhost is taken out because we will be using the heroku app url
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 message1.textContent = "Error: " + data.error
