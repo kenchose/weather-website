@@ -3,7 +3,7 @@ const path = require("path");
 const hbs = require("hbs");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; // new port set by heroku #67
 
 const geocode = require("./util/geocode");
 const forecast = require("./util/forecast");
